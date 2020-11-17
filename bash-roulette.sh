@@ -15,7 +15,7 @@ arr[1]="CLICK"
 arr[2]="CLICK"
 arr[3]="BANG"
 arr[4]="CLICK"
-arr[4]="CLICK"
+arr[5]="CLICK"
 # Define what constitutes "random"
 rand=$[$RANDOM % ${#arr[@]}]
 # Let's see what noise that trigger produces
